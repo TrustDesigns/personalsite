@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trust — Designer & Digital Creative</title>
+<meta name="description" content="Trust is a multidisciplinary designer creating brands, interfaces, websites and digital experiences.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{--ink:#11100f;--paper:#f5f2ec;--muted:#77716a;--line:#d9d4cb;--lime:#d8ff4f;--orange:#ff7b43}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Manrope,system-ui,sans-serif}
+a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:0 28px}
+nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.logo{font-weight:800;letter-spacing:-.06em;font-size:24px}.logo span{color:var(--orange)}
+.navlinks{display:flex;gap:28px;font:12px "DM Mono",monospace;text-transform:uppercase}.navlinks a:hover{opacity:.55}
+.hero{min-height:calc(100vh - 82px);display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:end;padding:70px 0 52px}
+.kicker{font:12px "DM Mono",monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:25px}
+h1{font-size:clamp(62px,9.5vw,142px);line-height:.82;letter-spacing:-.085em;margin:0;max-width:900px}
+h1 em{font-style:normal;color:var(--orange)}
+.hero-copy{align-self:center;max-width:370px;font-size:18px;line-height:1.55;color:#4d4843}
+.cta{display:inline-flex;margin-top:24px;background:var(--ink);color:white;padding:15px 19px;border-radius:100px;font-size:13px;font-weight:700}
+.cta:hover{transform:translateY(-2px)}
+.sticker{width:260px;height:260px;border-radius:50%;background:var(--lime);display:grid;place-items:center;justify-self:end;position:relative;transform:rotate(7deg)}
+.sticker:before{content:"";position:absolute;inset:18px;border:1px solid var(--ink);border-radius:50%}
+.sticker b{font-size:42px;letter-spacing:-.08em}.sticker small{position:absolute;bottom:49px;font:10px "DM Mono",monospace}
+.marquee{overflow:hidden;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:16px 0;white-space:nowrap;font:12px "DM Mono",monospace;text-transform:uppercase}
+.marquee span{display:inline-block;margin-right:45px}
+section{padding:120px 0;border-bottom:1px solid var(--line)}
+.section-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:45px}.section-head h2{font-size:46px;letter-spacing:-.06em;margin:0}.num{font:12px "DM Mono",monospace;color:var(--muted)}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{min-height:390px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line);background:#ece8e0;transition:.25s}.card:hover{transform:translateY(-5px);background:#e7e2d9}
+.visual{height:250px;display:grid;place-items:center;overflow:hidden;position:relative}
+.visual.dark{background:#171717;color:white}.visual.lime{background:var(--lime)}.visual.orange{background:var(--orange)}
+.ui{width:72%;height:70%;background:#f8f6f1;color:#111;border-radius:12px;padding:12px;box-shadow:0 15px 35px #0002}.ui .bar{height:7px;background:#111;margin-bottom:10px;border-radius:4px;width:35%}.ui .row{display:grid;grid-template-columns:1fr 1fr;gap:8px}.ui .box{height:55px;background:#ddd8cf;border-radius:6px}.ui .box.big{height:100px;background:#c8ff3f}.word{font-size:55px;font-weight:800;letter-spacing:-.08em;transform:rotate(-5deg)}.orb{width:150px;height:150px;border:1px solid #111;border-radius:50%;box-shadow:40px -25px 0 -15px #111}
+.card-meta{display:flex;justify-content:space-between;gap:20px;margin-top:20px}.card h3{margin:0;font-size:24px;letter-spacing:-.04em}.tag{font:10px "DM Mono",monospace;text-transform:uppercase;color:var(--muted)}
+.about{display:grid;grid-template-columns:.7fr 1.3fr;gap:70px}.about h3{font-size:48px;line-height:1;letter-spacing:-.065em;margin:0}.about p{font-size:21px;line-height:1.55;margin:0 0 25px;color:#49443f}.facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:45px}.fact{background:var(--paper);padding:24px}.fact b{display:block;font-size:25px;margin-bottom:6px}.fact span{font:11px "DM Mono",monospace;text-transform:uppercase;color:var(--muted)}
+.services{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}.service{padding:28px 20px 10px 0;border-right:1px solid var(--line);min-height:180px}.service:not(:first-child){padding-left:20px}.service:last-child{border-right:0}.service b{font-size:19px}.service p{font-size:14px;line-height:1.55;color:var(--muted)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}.contact h2{font-size:clamp(55px,8vw,105px);line-height:.86;letter-spacing:-.08em;margin:0}.contact h2 em{font-style:normal;color:var(--orange)}.contact-copy{justify-self:end;max-width:330px}.contact-copy p{line-height:1.6;color:var(--muted)}footer{padding:24px 0;font:11px "DM Mono",monospace;color:var(--muted);display:flex;justify-content:space-between}
+@media(max-width:800px){.hero{grid-template-columns:1fr;min-height:auto;padding-top:60px}.sticker{justify-self:start;width:190px;height:190px}.sticker b{font-size:32px}.projects,.about,.contact{grid-template-columns:1fr}.services{grid-template-columns:1fr 1fr}.service:nth-child(2){border-right:0}.service:nth-child(3){padding-left:0}.navlinks{gap:13px}.navlinks a:nth-child(2){display:none}section{padding:80px 0}.section-head h2{font-size:38px}}
+@media(max-width:500px){.wrap{padding:0 20px}.services{grid-template-columns:1fr}.service,.service:not(:first-child){border-right:0;border-bottom:1px solid var(--line);padding:22px 0}.projects{grid-template-columns:1fr}.card{min-height:350px}h1{font-size:65px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a class="logo" href="#">trust<span>.</span></a><div class="navlinks"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></div></nav>
+<header class="hero">
+  <div><div class="kicker">Designer / builder / creative thinker</div><h1>I make ideas<br>look <em>real.</em></h1></div>
+  <div class="hero-copy">I’m Trust — a multidisciplinary designer working across brand identity, UI/UX, web design and digital products. I like turning messy ideas into clear, useful experiences.<br><a class="cta" href="#work">See selected work ↓</a></div>
+  <div class="sticker"><b>TRUST</b><small>DESIGN + DIGITAL</small></div>
+</header>
+</div>
+<div class="marquee"><span>Brand identity</span><span>UI/UX</span><span>Web design</span><span>Digital products</span><span>Visual direction</span><span>Brand identity</span><span>UI/UX</span></div>
+
+<main class="wrap">
+<section id="work">
+ <div class="section-head"><h2>Selected work</h2><span class="num">01 — 04</span></div>
+ <div class="projects">
+  <article class="card"><div class="visual dark"><div class="ui"><div class="bar"></div><div class="row"><div class="box big"></div><div class="box"></div><div class="box"></div><div class="box big"></div></div></div></div><div class="card-meta"><div><h3>Reachout World</h3><div class="tag">Product / Dashboard</div></div><div class="tag">01</div></div></article>
+  <article class="card"><div class="visual lime"><div class="word">B&B</div></div><div class="card-meta"><div><h3>Binge & Blends</h3><div class="tag">Brand identity / Visuals</div></div><div class="tag">02</div></div></article>
+  <article class="card"><div class="visual orange"><div class="orb"></div></div><div class="card-meta"><div><h3>Digital Products</h3><div class="tag">UI/UX / Web experiences</div></div><div class="tag">03</div></div></article>
+  <article class="card"><div class="visual dark"><div class="word" style="color:#d8ff4f">BUILD.</div></div><div class="card-meta"><div><h3>Experiments & Builds</h3><div class="tag">Web / Creative technology</div></div><div class="tag">04</div></div></article>
+ </div>
+</section>
+
+<section id="about">
+ <div class="section-head"><h2>About</h2><span class="num">02 — 04</span></div>
+ <div class="about"><h3>Not just a designer. A problem solver with a visual brain.</h3><div>
+ <p>I work at the intersection of design, technology and communication. My sweet spot is taking an idea that feels complicated and giving it a visual system people can actually understand and use.</p>
+ <p>My practice is deliberately broad: identity systems, social visuals, interfaces, websites and digital products. I’m also learning by building — which means the portfolio grows with the experiments.</p>
+ <div class="facts"><div class="fact"><b>01</b><span>Brand & visual identity</span></div><div class="fact"><b>02</b><span>UI/UX & product design</span></div><div class="fact"><b>03</b><span>Web design & front-end</span></div><div class="fact"><b>04</b><span>Creative direction</span></div></div>
+ </div></div>
+</section>
+
+<section>
+ <div class="section-head"><h2>What I do</h2><span class="num">03 — 04</span></div>
+ <div class="services">
+  <div class="service"><b>01 / Brand</b><p>Identity systems, art direction, social visuals and the details that make a brand feel intentional.</p></div>
+  <div class="service"><b>02 / Product</b><p>User flows, wireframes, interfaces and design systems for useful digital products.</p></div>
+  <div class="service"><b>03 / Web</b><p>Responsive websites that combine strong visual hierarchy with clean, practical front-end thinking.</p></div>
+  <div class="service"><b>04 / Direction</b><p>Creative thinking from the first messy idea through to the final visual experience.</p></div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="contact"><h2>Have an idea?<br><em>Let’s build it.</em></h2><div class="contact-copy"><p>I’m open to creative collaborations, freelance design work, product ideas and interesting problems.</p><a class="cta" href="mailto:hello@trust.design">Start a conversation ↗</a></div></div>
+</section>
+</main>
+<div class="wrap"><footer><span>© 2026 Trust</span><span>Abuja, Nigeria · Available for work</span></footer></div>
+</body></html>
